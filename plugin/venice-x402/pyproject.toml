@@ -1,0 +1,7 @@
+[project]
+name = "venice-x402"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "eth-account>=0.13,<0.14",
+]

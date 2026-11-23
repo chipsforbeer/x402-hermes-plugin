@@ -1,0 +1,5 @@
+name: venice-x402-provider
+kind: model-provider
+version: 0.1.0
+description: Venice AI paid from a USDC wallet's x402 credit (needs the venice-x402 plugin for the wallet key)
+author: chipsforbeer

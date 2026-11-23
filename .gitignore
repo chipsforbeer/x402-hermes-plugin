@@ -1,0 +1,13 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# local environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+uv.lock
+.DS_Store

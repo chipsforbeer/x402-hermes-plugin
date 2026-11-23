@@ -1,0 +1,31 @@
+name: venice-x402
+version: 0.1.0
+description: Pay for Venice inference from a USDC wallet (x402) — balance in the status bar, one-click top-ups.
+author: chipsforbeer
+provides_hooks:
+  - post_api_request
+  - api_request_error
+config_schema:
+  private_key:
+    type: secret
+    env: VENICE_X402_PRIVATE_KEY
+    label: Wallet private key
+    description: Dedicated Base wallet holding USDC. Used only to sign Venice sign-ins and top-up payments; never sent anywhere.
+  low_balance_usd:
+    type: float
+    default: 1.0
+    label: Low-credit alert (USD)
+    description: Show the top-up prompt when Venice credit drops below this.
+  default_topup_usd:
+    type: float
+    default: 10.0
+    label: Default top-up (USD)
+    description: Amount the alert's Top up button pays. Venice minimum is $5.
+  max_topup_usd:
+    type: float
+    default: 20.0
+    label: Max per top-up (USD)
+  daily_limit_usd:
+    type: float
+    default: 50.0
+    label: Max top-ups per 24h (USD)
